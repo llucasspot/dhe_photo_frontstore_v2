@@ -27,6 +27,9 @@
     "paths": {
       "#assets": ["src/assets"],
       "#components": ["src/components"],
+      "#features/auth/i18n": ["src/features/auth/i18n"],
+      "#features/auth/domain": ["src/features/auth/domain"],
+      "#features/auth/react": ["src/features/auth/react"],
       "#layout": ["src/layout"],
       "#di/domain": ["./src/lib/di/src/domain"],
       "#di/react": ["./src/lib/di/src/react"],
@@ -49,7 +52,12 @@
       "#mock": ["./src/features/_/mock"],
       "#mock/domain": ["./src/features/_/mock/domain"],
       "#mock/infra": ["./src/features/_/mock/infra"],
-      "#api": ["./src/features/_/api"]
+      "#api": ["./src/features/_/api"],
+      "#state/domain": ["./src/features/_/state/domain"],
+      "#state/modules": ["./src/features/_/state/modules"],
+      "#state/react": ["./src/features/_/state/react"],
+      "#storage/domain": ["./src/features/_/storage/domain"],
+      "#storage/modules": ["./src/features/_/storage/modules"]
     },
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

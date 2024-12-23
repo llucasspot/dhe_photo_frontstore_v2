@@ -1,6 +1,7 @@
 import { Module } from '#di';
+import { ApiMockModule } from '#mock';
 
 @Module({
-  imports: [],
+  imports: [ApiMockModule],
 })
 export class ApiModule {}

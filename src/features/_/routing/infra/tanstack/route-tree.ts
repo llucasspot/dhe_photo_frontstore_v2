@@ -3,11 +3,14 @@ import {
   createRoute,
 } from '@tanstack/react-router';
 
+import { AuthService } from '#features/auth/domain';
+import { SignInPage } from '#features/auth/react';
 import { OutletLayout, RootLayout } from '#layout';
 import { RoutingServicePort } from '#routing/domain';
 
 type Context = {
   routingService: RoutingServicePort;
+  authService: AuthService;
 };
 
 export const rootRoute = createRootRouteWithContext<Context>()({
@@ -22,6 +25,12 @@ export const authLayout = createRoute({
   component: OutletLayout,
 });
 
+export const signInRoute = createRoute({
+  getParentRoute: () => authLayout,
+  path: '/login',
+  component: SignInPage,
+});
+
 // ----- rootLayout -----
 
 export const rootLayout = createRoute({
@@ -33,6 +42,6 @@ export const rootLayout = createRoute({
 // ----- routeTree -----
 
 export const routeTree = rootRoute.addChildren([
-  authLayout.addChildren([]),
+  authLayout.addChildren([signInRoute]),
   rootLayout.addChildren([]),
 ]);

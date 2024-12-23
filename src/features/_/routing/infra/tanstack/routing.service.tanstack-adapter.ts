@@ -11,6 +11,7 @@ export class RoutingServiceTanstackAdapter extends RoutingServicePort {
   public static readonly router = createRouter({
     routeTree,
     context: {
+      authService: undefined!,
       routingService: undefined!,
     },
   });
