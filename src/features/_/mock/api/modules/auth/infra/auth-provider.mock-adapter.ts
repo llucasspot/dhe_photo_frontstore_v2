@@ -1,5 +1,5 @@
 import { Finder } from '../../../../database/domain';
-import { CustomersDaoPort } from '../../../../database/modules/auth/domain/customers-dao.port.ts';
+import { CustomersDaoPort } from '../../../../database/modules/auth/domain/customers-dao.port';
 import { ForMockControllerService } from '../../../domain/for-mock-controller-service';
 
 import { inject, singleton } from '#di';

@@ -5,6 +5,7 @@ export type AuthI18nTranslationsKeys = {
     email: string;
     studentCode: string;
     submit: string;
+    gcu: string;
     validation: {
       email: {
         IsEmail: string;

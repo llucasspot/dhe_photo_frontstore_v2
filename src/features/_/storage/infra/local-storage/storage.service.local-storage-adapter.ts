@@ -1,9 +1,5 @@
-import {
-  StorageItem,
-  StorageServicePort,
-} from '../../domain/storage.service.port.ts';
-
 import { singleton } from '#di';
+import { StorageItem, StorageServicePort } from '#storage/domain';
 
 @singleton()
 export class StorageServiceLocalStorageAdapter implements StorageServicePort {

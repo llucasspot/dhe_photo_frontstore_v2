@@ -3,10 +3,11 @@ import { AuthI18nTranslationsKeys } from '../auth.i18n-translations-keys';
 export const enAuth: AuthI18nTranslationsKeys = {
   signIn: {
     title: 'Welcome back',
-    subtitle: 'Please sign in to your account',
+    subtitle: 'Sign in with a student code.',
     email: 'Email',
     studentCode: 'Student code',
     submit: 'Sign In',
+    gcu: 'Terms and Conditions',
     validation: {
       email: {
         IsEmail: 'Invalid email address',

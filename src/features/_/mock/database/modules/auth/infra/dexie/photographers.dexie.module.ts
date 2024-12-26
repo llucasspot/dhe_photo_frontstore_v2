@@ -1,8 +1,8 @@
 import { DatabaseDexieModule } from '../../../../infra/dexie/database.dexie.module';
-import { CustomersDaoPort } from '../../domain/customers-dao.port.ts';
+import { CustomersDaoPort } from '../../domain/customers-dao.port';
 import { PhotographersDaoPort } from '../../domain/photographers-dao.port';
 
-import { CustomersDaoDexieAdapter } from './adapters/customers-dao.dexie-adapter.ts';
+import { CustomersDaoDexieAdapter } from './adapters/customers-dao.dexie-adapter';
 import { PhotographersDaoDexieAdapter } from './adapters/photographers-dao.dexie-adapter';
 
 import { Module } from '#di';

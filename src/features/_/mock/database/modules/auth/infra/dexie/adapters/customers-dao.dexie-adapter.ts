@@ -2,7 +2,7 @@ import {
   DaoDexie,
   DatabaseServiceDexieAdapter,
 } from '../../../../../infra/dexie';
-import { CustomersDaoPort } from '../../../domain/customers-dao.port.ts';
+import { CustomersDaoPort } from '../../../domain/customers-dao.port';
 
 import { inject, singleton } from '#di';
 

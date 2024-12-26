@@ -3,10 +3,11 @@ import { AuthI18nTranslationsKeys } from '../auth.i18n-translations-keys';
 export const frAuth: AuthI18nTranslationsKeys = {
   signIn: {
     title: 'Bon retour',
-    subtitle: 'Veuillez vous connecter à votre compte',
+    subtitle: 'Connectez vous avec un code étudiant.',
     email: 'Email',
     studentCode: 'Code étudiant',
     submit: 'Se connecter',
+    gcu: "Conditions Générales d'Utilisation",
     validation: {
       email: {
         IsEmail: 'Adresse email invalide',
