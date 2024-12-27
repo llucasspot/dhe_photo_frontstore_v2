@@ -1,11 +1,8 @@
-import { frAuth } from '../../../../../../auth/i18n';
-
+import { frAuth } from '#features/auth/i18n';
+import { frHome } from '#features/home/i18n';
 import { Translations } from '#i18n/domain';
 
 export const fr: Translations = {
   auth: frAuth,
-  home: {
-    title: 'Accueil',
-    subtitle: 'accueil',
-  },
+  home: frHome,
 } as const;

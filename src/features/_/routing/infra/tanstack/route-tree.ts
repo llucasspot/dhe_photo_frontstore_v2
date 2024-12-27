@@ -5,6 +5,7 @@ import {
 
 import { AuthService } from '#features/auth/domain';
 import { SignInPage } from '#features/auth/react';
+import { HomePage } from '#features/home/react';
 import { OutletLayout, RootLayout } from '#layout';
 import { RoutingServicePort } from '#routing/domain';
 
@@ -39,9 +40,15 @@ export const rootLayout = createRoute({
   component: RootLayout,
 });
 
+export const homeRoute = createRoute({
+  getParentRoute: () => rootLayout,
+  path: '/home',
+  component: HomePage,
+});
+
 // ----- routeTree -----
 
 export const routeTree = rootRoute.addChildren([
   authLayout.addChildren([signInRoute]),
-  rootLayout.addChildren([]),
+  rootLayout.addChildren([homeRoute]),
 ]);

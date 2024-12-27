@@ -2,6 +2,7 @@ export const routes = {
   root: '/',
   authRoot: '/auth',
   login: '/auth/login',
+  home: '/home',
 } as const;
 
 export type Route = (typeof routes)[keyof typeof routes];

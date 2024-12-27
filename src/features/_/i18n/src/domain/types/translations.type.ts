@@ -1,9 +1,7 @@
-import { AuthI18nTranslationsKeys } from '../../../../../auth/i18n';
+import { AuthI18nTranslationsKeys } from '#features/auth/i18n';
+import { HomeI18nTranslationsKeys } from '#features/home/i18n';
 
 export type Translations = {
   auth: AuthI18nTranslationsKeys;
-  home: {
-    title: string;
-    subtitle: string;
-  };
+  home: HomeI18nTranslationsKeys;
 };
