@@ -1,4 +1,4 @@
-import { AuthModule } from './auth/auth.module.ts';
+import { AuthModule } from './auth/auth.module';
 import { CommonModule } from './common.module';
 
 import { ApiModule } from '#api';

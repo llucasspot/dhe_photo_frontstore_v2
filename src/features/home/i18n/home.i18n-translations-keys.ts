@@ -1,5 +1,10 @@
 export type HomeI18nTranslationsKeys = {
   navbar: {
+    'profile-button': {
+      'profile-button': string;
+      'orders-button': string;
+      'sign-out-button': string;
+    };
     menu: {
       openMain: string;
     };
@@ -11,8 +16,11 @@ export type HomeI18nTranslationsKeys = {
     notifications: {
       view: string;
     };
-    profile: {
-      view: string;
+    'portrait-picture-section': {
+      title: string;
     };
+  };
+  studentCard: {
+    over: string;
   };
 };

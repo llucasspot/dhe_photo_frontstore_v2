@@ -2,7 +2,7 @@ import { AuthState } from '../states';
 
 import { inject, singleton } from '#di';
 import { AuthProviderPort, SignInBody } from '#features/auth/domain';
-import { StorageServicePort } from '#storage/domain';
+import { StorageService } from '#storage/domain';
 
 @singleton()
 export class AuthService {
@@ -11,8 +11,8 @@ export class AuthService {
     private readonly authProvider: AuthProviderPort,
     @inject(AuthState)
     private readonly authState: AuthState,
-    @inject(StorageServicePort)
-    private readonly storageService: StorageServicePort,
+    @inject(StorageService)
+    private readonly storageService: StorageService,
   ) {}
 
   async signIn(body: SignInBody): Promise<void> {
@@ -20,22 +20,22 @@ export class AuthService {
     const photographer = await this.authProvider.getUserInfo(userId);
 
     this.authState.set({ currentUser: photographer });
-    this.storageService.set(StorageServicePort.currentAccessToken, authToken);
-    this.storageService.set(StorageServicePort.currentUserId, userId);
+    this.storageService.set(StorageService.currentAccessToken, authToken);
+    this.storageService.set(StorageService.currentUserId, userId);
   }
 
   async logout() {
     await this.authProvider.logout();
 
     this.authState.set({ currentUser: null });
-    this.storageService.remove(StorageServicePort.currentAccessToken);
-    this.storageService.remove(StorageServicePort.currentUserId);
+    this.storageService.remove(StorageService.currentAccessToken);
+    this.storageService.remove(StorageService.currentUserId);
   }
 
   isAuthenticated(): boolean {
     return (
-      this.storageService.get(StorageServicePort.currentAccessToken) !== null &&
-      this.storageService.get(StorageServicePort.currentUserId) !== null
+      this.storageService.get(StorageService.currentAccessToken) !== null &&
+      this.storageService.get(StorageService.currentUserId) !== null
     );
   }
 }

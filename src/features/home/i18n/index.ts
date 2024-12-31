@@ -1,2 +1,2 @@
-export * from './home.i18n-translations-keys.ts';
+export * from './home.i18n-translations-keys';
 export * from './locales';

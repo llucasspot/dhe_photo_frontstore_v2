@@ -1,1 +1,1 @@
-export * from './storage.service.ts';
+export * from './storage.service';

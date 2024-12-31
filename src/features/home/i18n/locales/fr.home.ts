@@ -1,7 +1,12 @@
-import { HomeI18nTranslationsKeys } from '../home.i18n-translations-keys.ts';
+import { HomeI18nTranslationsKeys } from '../home.i18n-translations-keys';
 
 export const frHome: HomeI18nTranslationsKeys = {
   navbar: {
+    'profile-button': {
+      'profile-button': 'Votre profile',
+      'orders-button': 'Vos commandes',
+      'sign-out-button': 'Se déconnecter',
+    },
     menu: {
       openMain: 'Ouvrir le menu principal',
     },
@@ -13,8 +18,11 @@ export const frHome: HomeI18nTranslationsKeys = {
     notifications: {
       view: 'Voir les notifications',
     },
-    profile: {
-      view: 'Votre profil',
+    'portrait-picture-section': {
+      title: 'Photos de portrait',
     },
+  },
+  studentCard: {
+    over: "Voir les détails de l'étudiant",
   },
 } as const;

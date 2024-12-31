@@ -1,14 +1,18 @@
 import { useRef } from 'react';
 
+import { useAddStudentCode } from '../hooks';
+
 import { useI18n } from '#i18n/react';
 
-interface AddStudentCodeInputProps {
-  onAdd: (studentCode: string) => void;
-}
-
-export const AddStudentCodeInput = ({ onAdd }: AddStudentCodeInputProps) => {
+export const AddStudentCodeInput = () => {
   const { t } = useI18n();
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const { mutate: addStudentCode } = useAddStudentCode();
+
+  const onAdd = (studentCode: string) => {
+    addStudentCode(studentCode);
+  };
 
   const handleAdd = () => {
     if (inputRef.current) {
