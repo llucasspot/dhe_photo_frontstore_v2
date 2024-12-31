@@ -1,0 +1,24 @@
+http:
+  routers:
+    p3001:
+      rule: "PathPrefix(`/3001`)"
+      service: p3001
+      entryPoints:
+        - web
+
+    p3002:
+      rule: "PathPrefix(`/3002`)"
+      service: p3002
+      entryPoints:
+        - web
+
+  services:
+    p3001:
+      loadBalancer:
+        servers:
+          - url: "http://host.docker.internal:3001"
+
+    p3002:
+      loadBalancer:
+        servers:
+          - url: "http://host.docker.internal:3002"

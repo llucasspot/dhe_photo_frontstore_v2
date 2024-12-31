@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+
+  traefik:
+    image: traefik:latest
+    container_name: dhe-traefik
+    ports:
+      - "80:80"
+      - "8080:8080"
+    command:
+      - --api.insecure=true
+      - --providers.docker
+      - --api.dashboard=true
+      - --entrypoints.web.address=:80
+      - --providers.file.directory=/etc/traefik/dynamic
+      - --providers.file.watch=true
+    volumes:
+      - ./dynamic:/etc/traefik/dynamic
+      - /var/run/docker.sock:/var/run/docker.sock

@@ -1,4 +1,5 @@
 import react from '@vitejs/plugin-react';
+import dotenv from 'dotenv';
 import path from 'path';
 import { defineConfig } from 'vite';
 
@@ -6,9 +7,17 @@ function build(relativePath: string) {
   return path.resolve(__dirname, relativePath);
 }
 
+dotenv.config();
+
+// TODO
+const basepath = process.env.VITE_BASE_PATH ?? '/';
+console.log('basepath : ', basepath);
+
 export default defineConfig({
   plugins: [react()],
+  base: basepath,
   server: {
+    host: '0.0.0.0',
     port: 3002,
   },
   resolve: {
@@ -22,6 +31,9 @@ export default defineConfig({
       '#features/home/i18n': build('src/features/home/i18n'),
       '#features/home/domain': build('src/features/home/domain'),
       '#features/home/react': build('src/features/home/react'),
+      '#features/students/i18n': build('src/features/students/i18n'),
+      '#features/students/domain': build('src/features/students/domain'),
+      '#features/students/react': build('src/features/students/react'),
       '#layout': build('src/layout'),
       '#di/domain': build('src/lib/di/src/domain'),
       '#di/react': build('src/lib/di/src/react'),
