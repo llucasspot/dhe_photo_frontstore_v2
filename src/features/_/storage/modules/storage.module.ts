@@ -1,13 +1,13 @@
-import { StorageServiceLocalStorageAdapter } from '../infra/local-storage/storage.service.local-storage-adapter.ts';
+import { BrowserStorageServicePort } from '../domain/browser-storage.service.port';
+import { BrowserStorageServiceLocalStorageAdapter } from '../infra/local-storage/browser-storage.service.local-storage-adapter';
 
 import { Module } from '#di';
-import { StorageServicePort } from '#storage/domain';
 
 @Module({
   providers: [
     {
-      token: StorageServicePort,
-      useToken: StorageServiceLocalStorageAdapter,
+      token: BrowserStorageServicePort,
+      useToken: BrowserStorageServiceLocalStorageAdapter,
     },
   ],
 })
