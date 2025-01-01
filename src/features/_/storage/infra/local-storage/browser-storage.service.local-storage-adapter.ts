@@ -1,8 +1,8 @@
 import { BrowserStorageServicePort } from '../../domain/browser-storage.service.port';
 
-import { singleton } from '#di';
+import { adapter } from '#di';
 
-@singleton()
+@adapter(BrowserStorageServicePort)
 export class BrowserStorageServiceLocalStorageAdapter
   implements BrowserStorageServicePort
 {

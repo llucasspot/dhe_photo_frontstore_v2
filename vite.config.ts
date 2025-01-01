@@ -62,6 +62,10 @@ export default defineConfig({
       '#state/react': build('src/features/_/state/react'),
       '#storage/domain': build('src/features/_/storage/domain'),
       '#storage/modules': build('src/features/_/storage/modules'),
+      '#action/domain': build('src/features/_/action/domain'),
+      '#action/react': build('src/features/_/action/react'),
+      '#cache': build('src/features/_/cache'),
+      '#cache/domain': build('src/features/_/cache/domain'),
     },
   },
 });

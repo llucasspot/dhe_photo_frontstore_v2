@@ -1,9 +1,10 @@
 import { HomeContent, HomeHeader } from '../components';
 
-import { useStudents } from '#features/students/react';
+import { useQuery } from '#action/react';
+import { StudentsGetter } from '#features/home/domain';
 
 export const HomePage = () => {
-  const { data: students } = useStudents();
+  const { data: students } = useQuery(StudentsGetter);
 
   return (
     <div>

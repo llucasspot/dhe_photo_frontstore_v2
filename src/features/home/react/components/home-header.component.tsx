@@ -9,7 +9,7 @@ import {
 } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
-import { AddStudentCodeInput } from './add-student-code.input';
+import { AddStudentByCodeInput } from './add-student-by-code.input';
 
 import { useI18n } from '#i18n/react';
 import { Link } from '#routing/react';
@@ -97,7 +97,7 @@ export const HomeHeader = () => {
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
-                <AddStudentCodeInput />
+                <AddStudentByCodeInput />
               </div>
             </div>
           </div>
@@ -117,7 +117,7 @@ export const HomeHeader = () => {
 
       <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 px-2 pb-3 pt-2">
-          <AddStudentCodeInput />
+          <AddStudentByCodeInput />
         </div>
       </DisclosurePanel>
     </Disclosure>

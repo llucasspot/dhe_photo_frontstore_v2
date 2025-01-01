@@ -105,6 +105,10 @@
     "#state/modules": "./src/features/_/state/modules",
     "#state/react": "./src/features/_/state/react",
     "#storage/domain": "./src/features/_/storage/domain",
-    "#storage/modules": "./src/features/_/storage/modules"
+    "#storage/modules": "./src/features/_/storage/modules",
+    "#action/domain": "./src/features/_/action/domain",
+    "#action/react": "./src/features/_/action/react",
+    "#cache": "./src/features/_/cache",
+    "#cache/domain": "./src/features/_/cache/domain"
   }
 }

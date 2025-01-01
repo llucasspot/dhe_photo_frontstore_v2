@@ -1,17 +1,17 @@
 import { useRef } from 'react';
 
-import { useAddStudentCode } from '../hooks';
-
+import { useAction } from '#action/react';
+import { AddStudentByCodeAction } from '#features/home/domain';
 import { useI18n } from '#i18n/react';
 
-export const AddStudentCodeInput = () => {
+export const AddStudentByCodeInput = () => {
   const { t } = useI18n();
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const { mutate: addStudentCode } = useAddStudentCode();
+  const { mutate: addStudentByCode } = useAction(AddStudentByCodeAction);
 
   const onAdd = (studentCode: string) => {
-    addStudentCode(studentCode);
+    addStudentByCode({ studentCode });
   };
 
   const handleAdd = () => {

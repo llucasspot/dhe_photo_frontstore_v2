@@ -1,8 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
-import { StudentDto } from '#features/students/domain';
-
 import { classNames } from '#core/react';
+import { StudentDto } from '#features/students/domain';
 import { Link } from '#routing/react';
 
 type HomeContentProps = { students: StudentDto[] };
