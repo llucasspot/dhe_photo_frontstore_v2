@@ -4,7 +4,7 @@ import { GetterI } from '#action/domain';
 import { Token } from '#di/domain';
 import { useService } from '#di/react';
 
-export function useQuery<
+export function useGetter<
   TCacheTags extends string[] | Readonly<string[]>,
   TData,
   TArgs extends unknown[],

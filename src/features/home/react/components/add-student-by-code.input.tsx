@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
 import { useAction } from '#action/react';
-import { AddStudentByCodeAction } from '#features/home/domain';
+import { AddStudentByCodeAction } from '#features/home/use-cases';
 import { useI18n } from '#i18n/react';
 
 export const AddStudentByCodeInput = () => {
