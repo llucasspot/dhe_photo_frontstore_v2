@@ -1,9 +1,10 @@
+import { studentsKeys } from '../getters';
+
 import { Action } from '#action/domain';
 import { CacheServicePort } from '#cache/domain';
 import { inject, singleton } from '#di';
 import { PhotographerSlugGetterPort } from '#features/auth/domain';
 import { StudentsGetterControllerServicePort } from '#features/students/domain';
-import { studentsKeys } from '#features/students/react';
 import { StorageService } from '#storage/domain';
 
 @singleton()
